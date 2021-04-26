@@ -60,7 +60,7 @@ export default class ProductEdit extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query, variables }),
     });
-    this.showSuccess('Product Updated Successfully');
+    this.showSuccess('Success! Product Updated!!');
     this.loadData();
   }
 

@@ -30,7 +30,7 @@ export default class ProductAdd extends React.Component {
       Image: form.image.value,
     };
     const { createProduct } = this.props;
-    this.showSuccess('Product Added Successfully');
+    this.showSuccess('Success! Product Added!!');
     createProduct(product);
     // clearing the form for next inout
     form.price.value = '$';

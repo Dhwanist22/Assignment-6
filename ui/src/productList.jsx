@@ -74,7 +74,7 @@ export default class ProductList extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query, variables }),
     });
-    this.showSuccess('Product Deleted Successfully');
+    this.showSuccess('Success! Product Deleted!!');
     this.loadData();
   }
 
@@ -105,9 +105,9 @@ export default class ProductList extends React.Component {
     const { toastVisible, toastMessage, toastType } = this.state;
     return (
       <div>
-        <h1><Label>Inventory Management System</Label></h1>
+        <h1 title="Heading"><Label>Inventory Management System</Label></h1>
         <br />
-        <Panel>
+        <Panel title="Producct List Panel">
           <Panel.Heading>
             <Panel.Title toggle><u>Products List</u></Panel.Title>
           </Panel.Heading>
@@ -115,7 +115,7 @@ export default class ProductList extends React.Component {
             <ProductTable products={products} deleteProduct={this.deleteProduct} />
           </Panel.Body>
         </Panel>
-        <Panel>
+        <Panel title="Add Product Panel">
           <Panel.Heading>
             <Panel.Title toggle><u>Add Product</u></Panel.Title>
           </Panel.Heading>
